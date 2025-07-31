@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://rkl3vjt3nrvb"]
+
+[ext_resource type="Texture2D" uid="uid://xudrxf555j6o" path="res://assets/chatbg.png" id="1_72o6p"]
+[ext_resource type="FontFile" uid="uid://ckhemcblsx8i3" path="res://assets/Pixel Font.ttf" id="1_rgma2"]
+[ext_resource type="Script" uid="uid://b6rve2oa0dhjv" path="res://Chat.cs" id="1_tj37y"]
+
+[node name="Chat" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_tj37y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-36, 44)
+texture = ExtResource("1_72o6p")
+centered = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+clip_contents = false
+layout_mode = 0
+offset_left = -34.0
+offset_top = 51.0
+offset_right = 211.0
+offset_bottom = 116.0
+theme_override_fonts/normal_font = ExtResource("1_rgma2")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "yea
+
+
+<"
+horizontal_alignment = 2
+vertical_alignment = 2
