@@ -8,6 +8,7 @@ public partial class Chat : Control
 {
     public static Chat Instance { get; set; }
     private RichTextLabel chatlabel;
+    private ShaderMaterial shader;
     public string labeltext = "<";
     public bool pressedenter = false;
     public string typing = "";
@@ -29,6 +30,7 @@ public partial class Chat : Control
 
         chatlabel = GetNode<RichTextLabel>("RichTextLabel");
         chatlabel.Text = labeltext;
+        shader = (Material as ShaderMaterial);
 
         foreach (string msg in pendingMessages)
         {
@@ -45,6 +47,7 @@ public partial class Chat : Control
             if (pressedenter == false)
             {
                 pressedenter = true;
+                shader.SetShaderParameter("alpha", 1f);
                 chatlabel.ScrollToLine(chatlabel.GetLineCount());
             }
             else
@@ -52,8 +55,14 @@ public partial class Chat : Control
                 pressedenter = false;
                 Send(typing, true);
                 chatlabel.ScrollToLine(chatlabel.GetLineCount());
+                wawa();
             }
         }
+    }
+
+    public void wawa()
+    {
+        shader.SetShaderParameter("alpha", Mathf.Lerp(1f, 0f,0.5f));
     }
 
     public override void _Input(InputEvent @event)

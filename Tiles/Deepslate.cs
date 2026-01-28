@@ -17,7 +17,7 @@ namespace wawa.Tiles
             // connectOffset = 2;
             itemDrop = new Vector2I(2, 0);
             minMiningPower = 60;
-            sound = 1;
+            sound = 2;
         }
     }
 }

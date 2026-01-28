@@ -21,7 +21,7 @@ texture = ExtResource("1_fj7yv")
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0/custom_data_0 = Vector2i(1, 1)
 1:1/0/metadata/_better_terrain = {
-&"type": 2
+&"type": 3
 }
 2:1/0 = 0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -744,7 +744,9 @@ metadata/_better_terrain = {
 }], ["Grass", Color(0.848456, 0.175084, 0.175084, 1), 0, [0], {
 &"coord": Vector2i(3, 0),
 &"source_id": 2
-}], ["grass connections", Color(0.978382, 0.167461, 0.477462, 1), 0, [0], {
+}], ["Dirt", Color(0.609934, 0.370865, 0.798694, 1), 0, [0], {
+&"path": ""
+}], ["Stone", Color(0.978382, 0.167461, 0.477462, 1), 0, [0], {
 &"path": ""
 }]],
 &"version": "0.2"

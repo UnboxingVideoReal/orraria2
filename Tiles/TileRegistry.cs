@@ -14,6 +14,8 @@ namespace wawa.Tiles
         public static readonly Grass Grass = new Grass();
         public static readonly Stone Stone = new Stone();
         public static readonly Deepslate Deepslate = new Deepslate();
+        public static readonly Grasses Grasses = new Grasses();
+
 
         public static Dictionary<(Vector2I coord, int sourceid), Tile> AtlasLookup = new();
 
@@ -23,6 +25,7 @@ namespace wawa.Tiles
             RegisterTile(Grass);
             RegisterTile(Stone);
             RegisterTile(Deepslate);
+            RegisterTile(Grasses);
 
         }
 
@@ -34,6 +37,13 @@ namespace wawa.Tiles
             if (tile.connects == true)
             {
                 foreach (var coord in tile.connectionCoords)
+                {
+                    AtlasLookup[(coord, tile.sourceId)] = tile;
+                }
+            }
+            if (tile.isRandom == true)
+            {
+                foreach (var coord in tile.randomCoords)
                 {
                     AtlasLookup[(coord, tile.sourceId)] = tile;
                 }

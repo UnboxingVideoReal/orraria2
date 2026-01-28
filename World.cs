@@ -1,8 +1,10 @@
 using Godot;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata;
+using wawa;
 using wawa.Tiles;
 
 
@@ -17,16 +19,16 @@ public partial class World : TileMapLayer
     public FastNoiseLite surfacenoise = new FastNoiseLite();
     [Export]
     public FastNoiseLite hillnoise = new FastNoiseLite();
-    public const int worldwidth = 800;
+    public const int worldwidth = 500;
     public const int worldheight = 400;
-    public static int SEED = 22/*(int)GD.Randi()*/;
+    public static int SEED = 113/*(int)GD.Randi()*/;
     private int task = 0;
     int dirtlayer = worldheight / 2 + 1;
     double rocklayer = worldheight / 2.05 + 1;
     double deepslatelayer = worldheight / 1.333333 + 1;
     private bool wawa = true;
 
-    private List<Vector2I> surfacegrass = [new Vector2I(0, 0)];
+    private List<Vector2I> surfacegrass = [];
 
     private Hotbar hotbar;
 
@@ -37,7 +39,7 @@ public partial class World : TileMapLayer
     public static Vector2I stone = TileRegistry.Stone.connectionCoords[0];
     public static Vector2I deepslate = new Vector2I(2, 0);
 
-    public static Vector2I[] grasses = [new Vector2I(0, 4), new Vector2I(1, 4), new Vector2I(0, 5), new Vector2I(1, 5)];
+    public static Vector2I[] grasses = TileRegistry.Grasses.randomCoords;
 
 
     public static Vector2I coal = new Vector2I(2, 1);
@@ -413,38 +415,44 @@ public partial class World : TileMapLayer
                 Godot.Collections.Array<Vector2I> getsurrounding = GetSurroundingCells(new Vector2I(x - worldwidth / 2, -y + worldheight));
                 foreach (Vector2I cell in getsurrounding)
                 {
-                    if (grass.Contains(GetCellAtlasCoords(cell)))
+                    bool wawa = grass.Contains(GetCellAtlasCoords(cell));
+                    if (wawa && GetCellSourceId(cell) == 2 && !surfacegrass.Contains(cell))
                     {
-                        surfacegrass.Add(new Vector2I(x - worldwidth / 2, -y + worldheight));
+                        surfacegrass.Add(cell);
                     }
                 }
-                /*                GD.Print(getsurrounding.ToString());
-                */
             }
         }
-
-        // PASS 6 - GRASSES
-        /*        for (int x = 0; x < worldwidth; x++)
-                {
-                    for (int y = 0; y < worldheight; y++)
-                    {
-                        if (GetCellAtlasCoords(new Vector2I(x - worldwidth / 2, -y + worldheight)) == grass)
-                        {
-                            surfacegrass.Add(new Vector2I(x - worldwidth / 2, -y + worldheight));
-                        }
-
-                    }
-
-                }
-                // PASS 7 - MAKE MORE GRASS
-        /*        GD.Print(surfacegrass.ToString());
-        */
+        // PASS 7 - GRASSES
+/*        RivuletUtils.Log(RivuletUtils.ArrayListToString(surfacegrass, ", ", 300));
+*/        
         task = 0;
         for (int x = 1; x < worldwidth; x++)
         {
             int newx = surfacegrass[x].X;
             int y = surfacegrass[x].Y;
             SetCell(new Vector2I(newx, y - 1), 1, grasses[rng.RandiRange(0, 3)]);
+        }
+        // PASS 8 - MORE GRASS
+        for (int x = 0; x < worldwidth; x++)
+        {
+            for (int y = 0; y < worldheight; y++)
+            {
+                Vector2I selectedtile = new Vector2I(x - worldwidth / 2, -y + worldheight);
+                if (GetCellAtlasCoords(selectedtile) == air)
+                {
+                    Vector2I[] getsurrounding = GetSurroundingTiles(new Vector2I(x - worldwidth / 2, -y + worldheight));
+                    foreach (Vector2I cell in getsurrounding)
+                    {
+                        bool wawa = dirt == GetCellAtlasCoords(cell);
+                        if (wawa && GetCellSourceId(cell) == 1)
+                        {
+                            bt.SetCell(cell, 1);
+                            bt.UpdateTerrainCell(cell, true);
+                        }
+                    }
+                }
+            }
         }
 
         for (int i = 0; i < 50; i++)
@@ -484,6 +492,18 @@ public partial class World : TileMapLayer
             */
             else/* if (GetCellSourceId(pos) == 1)*/
             {
+                if (tile.connects == false)
+                {
+                    RivuletUtils.Log(tile.atlasCoords.ToString());
+                }
+                else if (tile.isRandom == true)
+                {
+                    RivuletUtils.Log(RivuletUtils.ArrayListToString(tile.randomCoords, "", 0));
+                }
+                else
+                {
+                    RivuletUtils.Log(RivuletUtils.ArrayListToString(tile.connectionCoords,"",0));
+                }
                 GD.Print(GetCellAtlasCoords(pos).ToString());
                 hotbar.getitem(tile.itemDrop, 1);
             }
@@ -496,6 +516,7 @@ public partial class World : TileMapLayer
         if (Input.IsActionPressed("build"))
         {
             Vector2I pos = LocalToMap(new Vector2I((int)GetGlobalMousePosition().X, (int)GetGlobalMousePosition().Y));
+
             if (GetCellAtlasCoords(pos) == air)
             {
                 if (player.inv_entory[hotbar.selectedslot] == air)
@@ -523,6 +544,42 @@ public partial class World : TileMapLayer
             }
         }
 
+        /* func get_surrounding_tiles(current_tile):
+	var surrounding_tiles = []
+	var target_tile
 
+	for y in 3:
+		for x in 3:
+			target_tile = current_tile + Vector2(x - 1, y - 1)
+
+			if current_tile == target_tile:
+				continue
+
+			surrounding_tiles.append(target_tile)
+
+	return surrounding_tiles
+*/
+    }
+    public Vector2I[] GetSurroundingTiles(Vector2I currenttile)
+    {
+        Vector2I[] surroundingtiles = [];
+        Vector2I targettile;
+
+        for (int y = 0; y < 3; y++)
+        {
+            for (int x = 0; x < 3; x++)
+            {
+                targettile = currenttile + new Vector2I(x - 1, y - 1);
+
+                if (currenttile == targettile)
+                {
+                    continue;
+                }
+
+                surroundingtiles.Append(targettile);
+            }
+        }
+
+        return surroundingtiles;
     }
 }

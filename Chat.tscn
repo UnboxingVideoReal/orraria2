@@ -1,10 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://rkl3vjt3nrvb"]
+[gd_scene load_steps=6 format=3 uid="uid://rkl3vjt3nrvb"]
 
 [ext_resource type="Texture2D" uid="uid://xudrxf555j6o" path="res://assets/chatbg.png" id="1_72o6p"]
-[ext_resource type="FontFile" uid="uid://ckhemcblsx8i3" path="res://assets/Pixel Font.ttf" id="1_rgma2"]
+[ext_resource type="Shader" uid="uid://xv5bq6kbivx2" path="res://shader.gdshader" id="1_cdms1"]
 [ext_resource type="Script" uid="uid://b6rve2oa0dhjv" path="res://Chat.cs" id="1_tj37y"]
+[ext_resource type="Theme" uid="uid://c8deqsk7wke7r" path="res://texttheme.tres" id="3_tj37y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dou6g"]
+shader = ExtResource("1_cdms1")
+shader_parameter/hue_shift = 0.0
+shader_parameter/saturation_mult = 1.0
+shader_parameter/value_mult = 1.0
+shader_parameter/brightness_add = 0.0
+shader_parameter/contrast_mult = 1.0
+shader_parameter/alpha = 1.0
 
 [node name="Chat" type="Control"]
+material = SubResource("ShaderMaterial_dou6g")
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -13,19 +24,20 @@ script = ExtResource("1_tj37y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 show_behind_parent = true
+use_parent_material = true
 position = Vector2(-36, 44)
 texture = ExtResource("1_72o6p")
 centered = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+use_parent_material = true
 clip_contents = false
 layout_mode = 0
 offset_left = -34.0
 offset_top = 51.0
 offset_right = 211.0
 offset_bottom = 116.0
-theme_override_fonts/normal_font = ExtResource("1_rgma2")
-theme_override_font_sizes/normal_font_size = 8
+theme = ExtResource("3_tj37y")
 bbcode_enabled = true
 text = "yea
 

@@ -20,6 +20,10 @@ public abstract partial class Tile : TileMapLayer
 
     public int sourceId { get; set; }
 
+    public bool isRandom { get; set; }
+
+    public Vector2I[] randomCoords { get; set; }
+
     public Vector2I atlasCoords { get; set; }
 
     public bool connects { get; set; }
@@ -34,174 +38,10 @@ public abstract partial class Tile : TileMapLayer
     /// DO NOT CHANGE
     /// </summary>
     public bool yep = false;
-
-    /*    public void MakeConnectionArray()
-        {
-            int connectoffsetnew = 0;
-            if (connectOffset == 0)
-            {
-                connectoffsetnew = 0;
-            }
-            else
-            {
-                connectoffsetnew = connectOffset * 12;
-            }
-            if ((int)connectType == 0)
-            {
-                connectionCoords = [
-                    new Vector2I(connectoffsetnew,0),
-
-                ];
-            }
-            else if ((int)connectType == 61)
-            {
-                connectionCoords = [
-                    new Vector2I(connectoffsetnew,0),
-                    new Vector2I(connectoffsetnew+1,0),
-                    new Vector2I(connectoffsetnew+2,0),
-                    new Vector2I(connectoffsetnew+3,0),
-                    new Vector2I(connectoffsetnew+4,0),
-                    new Vector2I(connectoffsetnew+5,0),
-                    new Vector2I(connectoffsetnew+6,0),
-                    new Vector2I(connectoffsetnew+7,0),
-                    new Vector2I(connectoffsetnew+8,0),
-                    new Vector2I(connectoffsetnew+9,0),
-                    new Vector2I(connectoffsetnew+10,0),
-
-                    new Vector2I(connectoffsetnew,1),
-                    new Vector2I(connectoffsetnew+1,1),
-                    new Vector2I(connectoffsetnew+2,1),
-                    new Vector2I(connectoffsetnew+3,1),
-                    new Vector2I(connectoffsetnew+4,1),
-                    new Vector2I(connectoffsetnew+5,1),
-                    new Vector2I(connectoffsetnew+6,1),
-                    new Vector2I(connectoffsetnew+7,1),
-                    new Vector2I(connectoffsetnew+8,1),
-                    new Vector2I(connectoffsetnew+9,1),
-                    new Vector2I(connectoffsetnew+10,1),
-
-                    new Vector2I(connectoffsetnew,2),
-                    new Vector2I(connectoffsetnew+1,2),
-                    new Vector2I(connectoffsetnew+2,2),
-                    new Vector2I(connectoffsetnew+3,2),
-                    new Vector2I(connectoffsetnew+4,2),
-                    new Vector2I(connectoffsetnew+5,2),
-                    new Vector2I(connectoffsetnew+6,2),
-                    new Vector2I(connectoffsetnew+7,2),
-                    new Vector2I(connectoffsetnew+8,2),
-                    new Vector2I(connectoffsetnew+9,2),
-                    new Vector2I(connectoffsetnew+10,2),
-                    new Vector2I(connectoffsetnew+11,2),
-
-                    new Vector2I(connectoffsetnew,3),
-                    new Vector2I(connectoffsetnew+1,3),
-                    new Vector2I(connectoffsetnew+3,2),
-                    new Vector2I(connectoffsetnew+4,3),
-                    new Vector2I(connectoffsetnew+5,3),
-                    new Vector2I(connectoffsetnew+6,3),
-                    new Vector2I(connectoffsetnew+7,3),
-                    new Vector2I(connectoffsetnew+8,3),
-                    new Vector2I(connectoffsetnew+9,3),
-                    new Vector2I(connectoffsetnew+10,3),
-                    new Vector2I(connectoffsetnew+11,3),
-
-                    new Vector2I(connectoffsetnew,4),
-                    new Vector2I(connectoffsetnew+1,4),
-                    new Vector2I(connectoffsetnew+4,4),
-                    new Vector2I(connectoffsetnew+5,4),
-                    new Vector2I(connectoffsetnew+6,4),
-                    new Vector2I(connectoffsetnew+7,4),
-                    new Vector2I(connectoffsetnew+8,4),
-                    new Vector2I(connectoffsetnew+9,4),
-                    new Vector2I(connectoffsetnew+10,4),
-                    new Vector2I(connectoffsetnew+11,4),
-
-                    new Vector2I(connectoffsetnew+6,5),
-                    new Vector2I(connectoffsetnew+7,5),
-                    new Vector2I(connectoffsetnew+8,5),
-                    new Vector2I(connectoffsetnew+9,5),
-                    new Vector2I(connectoffsetnew+10,5),
-                    new Vector2I(connectoffsetnew+11,5),
-                ];
-            }
-            else
-            {
-                connectionCoords = [
-                    new Vector2I(connectoffsetnew,0),
-                    new Vector2I(connectoffsetnew+1,0),
-                    new Vector2I(connectoffsetnew+2,0),
-                    new Vector2I(connectoffsetnew+3,0),
-                    new Vector2I(connectoffsetnew+4,0),
-                    new Vector2I(connectoffsetnew+5,0),
-                    new Vector2I(connectoffsetnew+6,0),
-                    new Vector2I(connectoffsetnew+7,0),
-                    new Vector2I(connectoffsetnew+8,0),
-                    new Vector2I(connectoffsetnew+9,0),
-                    new Vector2I(connectoffsetnew+10,0),
-
-                    new Vector2I(connectoffsetnew,1),
-                    new Vector2I(connectoffsetnew+1,1),
-                    new Vector2I(connectoffsetnew+2,1),
-                    new Vector2I(connectoffsetnew+3,1),
-                    new Vector2I(connectoffsetnew+4,1),
-                    new Vector2I(connectoffsetnew+5,1),
-                    new Vector2I(connectoffsetnew+6,1),
-                    new Vector2I(connectoffsetnew+7,1),
-                    new Vector2I(connectoffsetnew+8,1),
-                    new Vector2I(connectoffsetnew+9,1),
-                    new Vector2I(connectoffsetnew+10,1),
-
-                    new Vector2I(connectoffsetnew,2),
-                    new Vector2I(connectoffsetnew+1,2),
-                    new Vector2I(connectoffsetnew+2,2),
-                    new Vector2I(connectoffsetnew+3,2),
-                    new Vector2I(connectoffsetnew+4,2),
-                    new Vector2I(connectoffsetnew+5,2),
-                    new Vector2I(connectoffsetnew+6,2),
-                    new Vector2I(connectoffsetnew+7,2),
-                    new Vector2I(connectoffsetnew+8,2),
-                    new Vector2I(connectoffsetnew+9,2),
-                    new Vector2I(connectoffsetnew+10,2),
-                    new Vector2I(connectoffsetnew+11,2),
-
-                    new Vector2I(connectoffsetnew,3),
-                    new Vector2I(connectoffsetnew+1,3),
-                    new Vector2I(connectoffsetnew+3,2),
-                    new Vector2I(connectoffsetnew+4,3),
-                    new Vector2I(connectoffsetnew+5,3),
-                    new Vector2I(connectoffsetnew+6,3),
-                    new Vector2I(connectoffsetnew+7,3),
-                    new Vector2I(connectoffsetnew+8,3),
-                    new Vector2I(connectoffsetnew+9,3),
-                    new Vector2I(connectoffsetnew+10,3),
-                    new Vector2I(connectoffsetnew+11,3),
-
-                    new Vector2I(connectoffsetnew,4),
-                    new Vector2I(connectoffsetnew+1,4),
-                    new Vector2I(connectoffsetnew+4,4),
-                    new Vector2I(connectoffsetnew+5,4),
-                    new Vector2I(connectoffsetnew+6,4),
-                    new Vector2I(connectoffsetnew+7,4),
-                    new Vector2I(connectoffsetnew+8,4),
-                    new Vector2I(connectoffsetnew+9,4),
-                    new Vector2I(connectoffsetnew+10,4),
-                    new Vector2I(connectoffsetnew+11,4),
-
-                    new Vector2I(connectoffsetnew+6,5),
-                    new Vector2I(connectoffsetnew+7,5),
-                    new Vector2I(connectoffsetnew+8,5),
-                    new Vector2I(connectoffsetnew+9,5),
-                    new Vector2I(connectoffsetnew+10,5),
-                    new Vector2I(connectoffsetnew+11,5),
-                ];
-            }
-            GD.Print($"{connectionCoords}");
-        }*/
     public void MakeConnectionArray()
     {
         int connectoffsetnew = (connectOffset == 0) ? 0 : connectOffset * 12;
 
-        // Create a new list to assign to connectionCoords
         List<Vector2I> coords;
 
         if ((int)connectType == 1)

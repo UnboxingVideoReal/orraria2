@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\notun\\Documents\\wawa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\rivuletutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:rivuletutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\hotbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:hotbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\abstractclasses\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:abstractclasses\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\tiles\\tileregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:tiles\\tileregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\wawa.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -36,6 +12,22 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\notun\\Documents\\outpost\\Enigma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\tiles\\tileregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:tiles\\tileregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\abstractclasses\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:abstractclasses\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\tiles\\deepslate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,8 +50,16 @@
       "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:tiles\\dirt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\rivuletutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:rivuletutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\enums\\connectiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:enums\\connectiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\hotbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|solutionrelative:hotbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9DF8B1B6-01C4-4A8A-9782-3117B556EB67}|wawa.csproj|c:\\users\\notun\\documents\\wawa\\addons\\better-terrain\\betterterrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -76,25 +76,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Tile.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\wawa\\AbstractClasses\\Tile.cs",
               "RelativeDocumentMoniker": "AbstractClasses\\Tile.cs",
               "ToolTip": "C:\\Users\\notun\\Documents\\wawa\\AbstractClasses\\Tile.cs",
               "RelativeToolTip": "AbstractClasses\\Tile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAA4AAAAAAAAAAAArwB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T03:26:55.123Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "Stone.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\wawa\\Tiles\\Stone.cs",
               "RelativeDocumentMoniker": "Tiles\\Stone.cs",
@@ -107,49 +106,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Chat.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\wawa\\Chat.cs",
               "RelativeDocumentMoniker": "Chat.cs",
               "ToolTip": "C:\\Users\\notun\\Documents\\wawa\\Chat.cs",
               "RelativeToolTip": "Chat.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAgwBUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-31T01:00:34.959Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "World.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\wawa\\World.cs",
               "RelativeDocumentMoniker": "World.cs",
               "ToolTip": "C:\\Users\\notun\\Documents\\wawa\\World.cs",
               "RelativeToolTip": "World.cs",
-              "ViewState": "AgIAAMQBAAAAAAAAAAAhwNcBAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAANoBAAAAAAAAAAAlwOEBAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-27T23:03:23.335Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "RivuletUtils.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\wawa\\RivuletUtils.cs",
               "RelativeDocumentMoniker": "RivuletUtils.cs",
               "ToolTip": "C:\\Users\\notun\\Documents\\wawa\\RivuletUtils.cs",
               "RelativeToolTip": "RivuletUtils.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAuwBAAAAAQAAAAAAAAAA==",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAABAAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T22:15:38.326Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "wawa.csproj",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\wawa\\wawa.csproj",
               "RelativeDocumentMoniker": "wawa.csproj",
@@ -157,11 +153,12 @@
               "RelativeToolTip": "wawa.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-25T01:17:02.382Z"
+              "WhenOpened": "2025-10-25T01:17:02.382Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "Grasses.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\wawa\\Tiles\\Grasses.cs",
               "RelativeDocumentMoniker": "Tiles\\Grasses.cs",
@@ -186,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "Dirt.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\wawa\\Tiles\\Dirt.cs",
               "RelativeDocumentMoniker": "Tiles\\Dirt.cs",
@@ -198,20 +195,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "TileRegistry.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\wawa\\Tiles\\TileRegistry.cs",
               "RelativeDocumentMoniker": "Tiles\\TileRegistry.cs",
               "ToolTip": "C:\\Users\\notun\\Documents\\wawa\\Tiles\\TileRegistry.cs",
               "RelativeToolTip": "Tiles\\TileRegistry.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
+              "ViewState": "AQIAACkAAAAAAAAAAAAhwDIAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T21:20:30.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T21:20:30.837Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "Deepslate.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\wawa\\Tiles\\Deepslate.cs",
               "RelativeDocumentMoniker": "Tiles\\Deepslate.cs",
@@ -223,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "Grass.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\wawa\\Tiles\\Grass.cs",
               "RelativeDocumentMoniker": "Tiles\\Grass.cs",
@@ -235,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "ConnectionType.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\wawa\\Enums\\ConnectionType.cs",
               "RelativeDocumentMoniker": "Enums\\ConnectionType.cs",
@@ -259,20 +255,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "Hotbar.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\wawa\\Hotbar.cs",
               "RelativeDocumentMoniker": "Hotbar.cs",
               "ToolTip": "C:\\Users\\notun\\Documents\\wawa\\Hotbar.cs",
               "RelativeToolTip": "Hotbar.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAMwBYAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAMwBYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T05:20:39.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T05:20:39.056Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "Enigma.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\outpost\\Enigma.cs",
               "RelativeDocumentMoniker": "..\\outpost\\Enigma.cs",
@@ -280,17 +275,18 @@
               "RelativeToolTip": "..\\outpost\\Enigma.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAAADMAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-28T01:42:48.453Z"
+              "WhenOpened": "2025-07-28T01:42:48.453Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\wawa\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",
               "ToolTip": "C:\\Users\\notun\\Documents\\wawa\\Player.cs",
               "RelativeToolTip": "Player.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAIwAoAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAIwD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-28T01:03:12.322Z",
               "EditorCaption": ""

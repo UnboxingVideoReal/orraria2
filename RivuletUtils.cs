@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,19 @@ namespace wawa
                 Chat.Instance.Send("[color=#999999]" + message + "[/color]", false);
             else
                 Chat.pendingMessages.Add("[color=#999999]" + message + "[/color]");
+        }
+
+        public static string ArrayListToString<T>(IEnumerable<T> items, string separator, int take)
+        {
+            var list = items.Select(i => i?.ToString() ?? "null");
+            if (take == 0)
+            {
+                return string.Join(separator, list);
+            }
+            else
+            {
+                return string.Join(separator, list.Take(take));
+            }
         }
     }
 }

@@ -6,8 +6,8 @@ using System.Net.NetworkInformation;
 
 public partial class Player : CharacterBody2D
 {
-    public float Speed = 130;
-    public int jumpvel { get; set; } = -260;
+    public float Speed = 2000;
+    public int jumpvel { get; set; } = -400;
     private AnimatedSprite2D _animatedSprite;
     private RichTextLabel positiontext;
     public Vector2 velocity = new Vector2(0, 0);
